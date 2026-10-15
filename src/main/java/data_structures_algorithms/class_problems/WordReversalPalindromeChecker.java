@@ -4,15 +4,11 @@ public class WordReversalPalindromeChecker {
     public static void main(String[] args) {
         checkPalindrome("level");
         checkPalindrome("java");
-        checkPalindrome("racecar");
     }
-    
+
     static void checkPalindrome(String word) {
-        StringBuilder reversed = new StringBuilder(word);
-        reversed.reverse();
-        String reversedStr = reversed.toString();
-        
-        boolean isPalindrome = word.equalsIgnoreCase(reversedStr);
-        System.out.println(word + " - " + (isPalindrome ? "palindrome" : "not a palindrome"));
+        String reversed = new StringBuilder(word).reverse().toString();
+        String verdict = word.equals(reversed) ? "palindrome" : "not a palindrome";
+        System.out.println(reversed + " - " + verdict);
     }
 }
