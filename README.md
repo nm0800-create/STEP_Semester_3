@@ -1,6 +1,6 @@
-# STEP Semester 3 - Coding Progress Log
+# STEP Semester 3 - Week 7: Encapsulation & Access Control
 
-## Week 7 — Encapsulation & Access Control ✅
+## Status ✅
 
 **Branch:** `feature/session_7`
 **Package:** `encapsulation/`
