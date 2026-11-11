@@ -1,6 +1,6 @@
 # STEP Semester 3 - Coding Progress Log
 
-**Problems solved: 95** across Weeks 1, 2, 4, 5, 6, 7, 8, 9, 10
+**Problems solved: 110** across Weeks 1, 2, 4, 5, 6, 7, 8, 9, 10, 11 (Week 3 not in this repository)
 
 ---
 
@@ -19,6 +19,7 @@
 | `feature/session_8` | Week 8 — Inheritance & Polymorphism | 10 | ✅ Live |
 | `feature/session_9` | Week 9 — Abstraction & Interfaces | 10 | ✅ Live |
 | `feature/session_10` | Week 10 — Data Structures & Algorithms | 15 | ✅ Live |
+| `feature/session_11` | Week 11 — Sorting & Searching | 15 | ✅ Live |
 
 ---
 
@@ -29,10 +30,11 @@
 - **Week 4 — Array Algorithms (10):** Kadane's, two-pointer, binary search
 - **Week 5 — Arrays & Methods (10):** 2D arrays, overloading, Comparable
 - **Week 6 — OOP Basics (10):** classes, constructors, static members
-- **Week 7 — Encapsulation & Access Control (10):** private state, defensive copies, read-only access, validated changes
+- **Week 7 — Encapsulation & Access Control (10):** private state, defensive copies, read-only access
 - **Week 8 — Inheritance & Polymorphism (10):** abstract classes, overriding, polymorphic collections
 - **Week 9 — Abstraction & Interfaces (10):** abstract classes, interfaces as optional capabilities
-- **Week 10 — Data Structures & Algorithms (15):** 10 practice + 5 assignment; string processing, number logic, binary search, 2D arrays
+- **Week 10 — Data Structures & Algorithms (15):** string processing, number logic, binary search, 2D arrays
+- **Week 11 — Sorting & Searching (15):** binary search, hashing, two pointers, sliding techniques; bubble, selection, insertion and counting sort written by hand
 
 ---
 
@@ -47,8 +49,9 @@
 - ✅ Week 8: 10/10
 - ✅ Week 9: 10/10
 - ✅ Week 10: 15/15
+- ✅ Week 11: 15/15
 
-**Total: 95 problems** (85 earlier + 10 from Week 7)
+**Total: 110 problems** (95 earlier + 15 from Week 11)
 
 ---
 
@@ -56,7 +59,7 @@
 
 ```bash
 git clone https://github.com/nm0800-create/STEP_Semester_3.git
-git checkout feature/session_7
+git checkout feature/session_11
 cd src/main/java
 javac -d out <package>/*/*.java
 java -cp out <package>.<class_problems>.<ClassName>
