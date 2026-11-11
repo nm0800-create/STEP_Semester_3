@@ -36,20 +36,22 @@ class FragileParcel extends Parcel implements Insurable {
 }
 
 public class ParcelShippingDesk {
+
     public static void main(String[] args) {
+        String[] types = {"STANDARD", "EXPRESS", "FRAGILE"};
         List<Parcel> parcels = new ArrayList<>();
         parcels.add(new StandardParcel(3, 500));
         parcels.add(new ExpressParcel(2, 1000));
         parcels.add(new FragileParcel(4, 2000));
-        
-        double total = 0;
-        for (Parcel p : parcels) {
+        double grandTotal = 0;
+        for (int i = 0; i < parcels.size(); i++) {
+            Parcel p = parcels.get(i);
             double charge = p.calculateCharge();
-            double insurance = (p instanceof Insurable) ? ((Insurable)p).getInsurance() : 0;
-            double t = charge + insurance;
-            System.out.printf("Charge=%.2f Insurance=%.2f Total=%.2f%n", charge, insurance, t);
-            total += t;
+            double insurance = (p instanceof Insurable) ? ((Insurable) p).getInsurance() : 0;
+            double total = charge + insurance;
+            System.out.printf("%s: Charge=%.2f Insurance=%.2f Total=%.2f%n", types[i], charge, insurance, total);
+            grandTotal += total;
         }
-        System.out.printf("Grand Total: %.2f%n", total);
+        System.out.printf("Grand Total: %.2f%n", grandTotal);
     }
 }

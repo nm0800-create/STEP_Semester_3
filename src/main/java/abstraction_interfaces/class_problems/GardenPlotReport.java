@@ -38,16 +38,18 @@ class TrianglePlot extends Plot {
 }
 
 public class GardenPlotReport {
+
     public static void main(String[] args) {
+        String[] shapes = {"CIRCLE", "RECTANGLE", "TRIANGLE"};
         List<Plot> plots = new ArrayList<>();
         plots.add(new CirclePlot("Asha", 5));
         plots.add(new RectanglePlot("Ravi", 4, 6));
         plots.add(new TrianglePlot("Neha", 10, 3));
-        
         double total = 0;
-        for (Plot p : plots) {
+        for (int i = 0; i < plots.size(); i++) {
+            Plot p = plots.get(i);
             double area = p.calculateArea();
-            System.out.printf("%s: %.2f%n", p.owner.toUpperCase(), area);
+            System.out.printf("%s (%s): %.2f%n", p.owner, shapes[i], area);
             total += area;
         }
         System.out.printf("Total Area: %.2f%n", total);

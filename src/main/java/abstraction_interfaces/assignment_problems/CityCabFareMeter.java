@@ -45,23 +45,23 @@ class SUV extends Cab implements NightServiceCapable {
 }
 
 public class CityCabFareMeter {
+
     public static void main(String[] args) {
+        String[] types = {"MINI", "SEDAN", "SUV", "MINI"};
         List<Object[]> trips = new ArrayList<>();
         trips.add(new Object[]{new Mini(8), "DAY"});
         trips.add(new Object[]{new Sedan(10), "NIGHT"});
         trips.add(new Object[]{new SUV(20), "DAY"});
         trips.add(new Object[]{new Mini(5), "NIGHT"});
-        
         double total = 0;
-        for (Object[] trip : trips) {
-            Cab cab = (Cab) trip[0];
-            String time = (String) trip[1];
-            
+        for (int i = 0; i < trips.size(); i++) {
+            Cab cab = (Cab) trips.get(i)[0];
+            String time = (String) trips.get(i)[1];
             if ("NIGHT".equals(time) && !(cab instanceof NightServiceCapable)) {
-                System.out.println("night service not available");
+                System.out.println(types[i] + ": night service not available");
             } else {
                 double fare = cab.calculateFare(time);
-                System.out.printf("%.2f%n", fare);
+                System.out.printf("%s: %.2f%n", types[i], fare);
                 total += fare;
             }
         }

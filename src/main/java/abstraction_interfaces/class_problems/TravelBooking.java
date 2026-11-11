@@ -34,14 +34,15 @@ class Flight extends TravelMode {
 }
 
 public class TravelBooking {
+
     public static void main(String[] args) {
+        String[] types = {"BUS", "TRAIN", "FLIGHT"};
         List<TravelMode> bookings = new ArrayList<>();
         bookings.add(new Bus(200));
         bookings.add(new Train(300));
         bookings.add(new Flight(500));
-        
-        for (TravelMode b : bookings) {
-            System.out.printf("%.2f%n", b.calculateTotal());
+        for (int i = 0; i < bookings.size(); i++) {
+            System.out.printf("%s: %.2f%n", types[i], bookings.get(i).calculateTotal());
         }
     }
 }

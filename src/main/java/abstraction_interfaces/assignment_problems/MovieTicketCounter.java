@@ -28,22 +28,23 @@ class PremiumTicket extends Ticket {
     @Override double getPricePerTicket() { return 250; }
 }
 
-class RecinerTicket extends Ticket {
-    public RecinerTicket(int c) { super(c); }
+class ReclinerTicket extends Ticket {
+    public ReclinerTicket(int c) { super(c); }
     @Override double getPricePerTicket() { return 400; }
 }
 
 public class MovieTicketCounter {
+
     public static void main(String[] args) {
+        String[] types = {"REGULAR", "PREMIUM", "RECLINER"};
         List<Ticket> bookings = new ArrayList<>();
         bookings.add(new RegularTicket(3));
         bookings.add(new PremiumTicket(2));
-        bookings.add(new RecinerTicket(1));
-        
+        bookings.add(new ReclinerTicket(1));
         double total = 0;
-        for (Ticket t : bookings) {
-            double amount = t.calculateTotal();
-            System.out.printf("%.2f%n", amount);
+        for (int i = 0; i < bookings.size(); i++) {
+            double amount = bookings.get(i).calculateTotal();
+            System.out.printf("%s: %.2f%n", types[i], amount);
             total += amount;
         }
         System.out.printf("Total: %.2f%n", total);

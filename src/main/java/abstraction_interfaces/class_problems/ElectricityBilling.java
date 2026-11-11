@@ -32,16 +32,17 @@ class FactoryConnection extends Connection {
 }
 
 public class ElectricityBilling {
+
     public static void main(String[] args) {
+        String[] types = {"HOME", "SHOP", "FACTORY"};
         List<Connection> connections = new ArrayList<>();
         connections.add(new HomeConnection(150));
         connections.add(new ShopConnection(90));
         connections.add(new FactoryConnection(120));
-        
         double total = 0;
-        for (Connection c : connections) {
-            double bill = c.calculateBill();
-            System.out.printf("%.2f%n", bill);
+        for (int i = 0; i < connections.size(); i++) {
+            double bill = connections.get(i).calculateBill();
+            System.out.printf("%s: %.2f%n", types[i], bill);
             total += bill;
         }
         System.out.printf("Total: %.2f%n", total);
