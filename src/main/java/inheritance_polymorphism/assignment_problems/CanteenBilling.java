@@ -29,17 +29,18 @@ class Guest extends Customer {
 }
 
 public class CanteenBilling {
+
     public static void main(String[] args) {
+        String[] types = {"STUDENT", "STAFF", "GUEST"};
         List<Customer> bills = new ArrayList<>();
         bills.add(new Student(200));
         bills.add(new Staff(300));
         bills.add(new Guest(150));
-        
         double total = 0;
-        for (Customer c : bills) {
-            double final_amt = c.calculateFinalAmount();
-            System.out.printf("%.2f%n", final_amt);
-            total += final_amt;
+        for (int i = 0; i < bills.size(); i++) {
+            double amount = bills.get(i).calculateFinalAmount();
+            System.out.printf("%s: %.2f%n", types[i], amount);
+            total += amount;
         }
         System.out.printf("Total: %.2f%n", total);
     }

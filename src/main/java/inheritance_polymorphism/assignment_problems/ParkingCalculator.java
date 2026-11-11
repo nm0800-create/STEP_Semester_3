@@ -29,17 +29,18 @@ class Truck extends Vehicle {
 }
 
 public class ParkingCalculator {
+
     public static void main(String[] args) {
+        String[] types = {"BIKE", "CAR", "TRUCK", "CAR"};
         List<Vehicle> vehicles = new ArrayList<>();
         vehicles.add(new Bike(3));
         vehicles.add(new Car(4));
         vehicles.add(new Truck(1));
         vehicles.add(new Car(1));
-        
         double total = 0;
-        for (Vehicle v : vehicles) {
-            double charge = v.calculateCharge();
-            System.out.printf("%.2f%n", charge);
+        for (int i = 0; i < vehicles.size(); i++) {
+            double charge = vehicles.get(i).calculateCharge();
+            System.out.printf("%s: %.2f%n", types[i], charge);
             total += charge;
         }
         System.out.printf("Total: %.2f%n", total);

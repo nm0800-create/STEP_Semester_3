@@ -30,16 +30,17 @@ class ACRoom extends Room {
 }
 
 public class HostelElectricity {
+
     public static void main(String[] args) {
+        String[] types = {"SINGLE", "SHARED", "AC"};
         List<Room> rooms = new ArrayList<>();
         rooms.add(new SingleRoom(120));
         rooms.add(new SharedRoom(150, 3));
         rooms.add(new ACRoom(100));
-        
         double total = 0;
-        for (Room r : rooms) {
-            double bill = r.calculateBill();
-            System.out.printf("%.2f%n", bill);
+        for (int i = 0; i < rooms.size(); i++) {
+            double bill = rooms.get(i).calculateBill();
+            System.out.printf("%s: %.2f%n", types[i], bill);
             total += bill;
         }
         System.out.printf("Total: %.2f%n", total);

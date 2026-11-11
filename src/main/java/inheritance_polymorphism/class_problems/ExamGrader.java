@@ -44,17 +44,18 @@ class Essay extends Question {
 }
 
 public class ExamGrader {
+
     public static void main(String[] args) {
+        String[] types = {"MCQ", "TF", "ESSAY", "ESSAY"};
         List<Question> questions = new ArrayList<>();
         questions.add(new MCQ("What is capital?", "Paris", "Paris", 10));
         questions.add(new TrueFalse("Earth is flat?", "False", "True", 5));
         questions.add(new Essay("Name OOP principles", "Inheritance, Polymorphism, Encapsulation", "Polymorphism is one.", 20));
         questions.add(new Essay("Describe abstraction", "Abstraction, Composition", "I talked about abstraction.", 15));
-        
         double total = 0;
-        for (Question q : questions) {
-            double score = q.calculateScore();
-            System.out.printf("%.2f%n", score);
+        for (int i = 0; i < questions.size(); i++) {
+            double score = questions.get(i).calculateScore();
+            System.out.printf("%s: %.2f%n", types[i], score);
             total += score;
         }
         System.out.printf("Total Score: %.2f%n", total);

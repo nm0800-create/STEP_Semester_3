@@ -33,16 +33,17 @@ class Metro extends Transport {
 }
 
 public class TransportFareCalculator {
+
     public static void main(String[] args) {
+        String[] types = {"BUS", "TRAIN", "METRO"};
         List<Transport> journeys = new ArrayList<>();
         journeys.add(new Bus(15));
         journeys.add(new Train(50));
         journeys.add(new Metro(10, 1.5));
-        
         double total = 0;
-        for (Transport t : journeys) {
-            double fare = t.calculateFare();
-            System.out.printf("%.2f%n", fare);
+        for (int i = 0; i < journeys.size(); i++) {
+            double fare = journeys.get(i).calculateFare();
+            System.out.printf("%s: %.2f%n", types[i], fare);
             total += fare;
         }
         System.out.printf("Total: %.2f%n", total);

@@ -33,16 +33,17 @@ class InternationalDelivery extends Delivery {
 }
 
 public class DeliverySystem {
+
     public static void main(String[] args) {
+        String[] types = {"STANDARD", "EXPRESS", "INTERNATIONAL"};
         List<Delivery> deliveries = new ArrayList<>();
         deliveries.add(new StandardDelivery(10, 50));
         deliveries.add(new ExpressDelivery(5, 20));
         deliveries.add(new InternationalDelivery(20, 100, 30));
-        
         double total = 0;
-        for (Delivery d : deliveries) {
-            double fee = d.calculateFee();
-            System.out.printf("%.2f%n", fee);
+        for (int i = 0; i < deliveries.size(); i++) {
+            double fee = deliveries.get(i).calculateFee();
+            System.out.printf("%s: %.2f%n", types[i], fee);
             total += fee;
         }
         System.out.printf("Total: %.2f%n", total);

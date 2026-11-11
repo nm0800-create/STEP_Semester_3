@@ -47,17 +47,18 @@ class BankTransferPayment extends Payment {
 }
 
 public class PaymentProcessor {
+
     public static void main(String[] args) {
+        String[] types = {"CARD", "WALLET", "BANKTRANSFER"};
         List<Payment> transactions = new ArrayList<>();
         transactions.add(new CardPayment(1000));
         transactions.add(new WalletPayment(500));
         transactions.add(new BankTransferPayment(2000));
-        
         double total = 0;
-        for (Payment p : transactions) {
-            double finalAmount = p.calculateFinalAmount();
-            System.out.printf("%.2f%n", finalAmount);
-            total += finalAmount;
+        for (int i = 0; i < transactions.size(); i++) {
+            double amount = transactions.get(i).calculateFinalAmount();
+            System.out.printf("%s: %.2f%n", types[i], amount);
+            total += amount;
         }
         System.out.printf("Total: %.2f%n", total);
     }
