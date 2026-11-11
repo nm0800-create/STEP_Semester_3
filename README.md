@@ -1,6 +1,6 @@
 # STEP Semester 3 - Coding Progress Log
 
-**Problems solved: 110** across Weeks 1, 2, 4, 5, 6, 7, 8, 9, 10, 11 (Week 3 not in this repository)
+**Problems solved: 110** across Weeks 1, 2, 4, 5, 6, 7, 8, 9, 10, 11 (Week 3 has no branch in this repository)
 
 ---
 
@@ -34,7 +34,7 @@
 - **Week 8 — Inheritance & Polymorphism (10):** abstract classes, overriding, polymorphic collections
 - **Week 9 — Abstraction & Interfaces (10):** abstract classes, interfaces as optional capabilities
 - **Week 10 — Data Structures & Algorithms (15):** string processing, number logic, binary search, 2D arrays
-- **Week 11 — Sorting & Searching (15):** binary search, hashing, two pointers, sliding techniques; bubble, selection, insertion and counting sort written by hand
+- **Week 11 — Sorting & Searching (15):** binary search, hashing, two pointers; bubble, selection, insertion and counting sort written by hand
 
 ---
 
