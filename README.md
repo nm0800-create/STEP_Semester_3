@@ -1,22 +1,37 @@
-# STEP Semester 3 - Coding Progress Log
+# STEP Semester 3 - Week 1: Fundamentals
 
-## Date: 12-09-2026
+**Branch:** `feature/session_1`
+**Package:** `fundamentals/`
+**Problems:** 10 (5 practice + 5 assignment)
 
-**Today's Work:**
-- Set up GitHub repository structure (main, develop, feature/session_1)
-- Completed Week 1 assignment: 5 problems
-  - Problem 1: Exam Hall Seat Duplication Checker (Arrays, nested loops)
-  - Problem 2: Typing Speed Test Accuracy Checker (String traversal, percentage calculation)
-  - Problem 3: Traffic Signal Streak Analyzer (String traversal, tracking running maximum)
-  - Problem 4: Warehouse Inventory Balancer (Arrays, sum accumulation, tracking max with index)
-  - Problem 5: Movie Review Word Length Profiler (String splitting, categorization)
+## Practice Problems (class_problems/)
 
-**Next Session Plan:**
-- Code review of Week 1 solutions
-- Begin Week 2 assignments
-- Optimize and refactor solutions if needed
+| # | Class | Topic |
+|---|-------|-------|
+| 1 | RockPaperScissorsGame | Game logic, conditionals |
+| 2 | PalindromeChecker | Palindromes (3 approaches) |
+| 3 | BMICalculator | Arithmetic, classification |
+| 4 | FirstNonRepeatingCharFinder | Character counting |
+| 5 | CustomerNameReverser | String handling |
 
-**Issues Faced:**
-- None
+## Assignment Problems (assignment_problems/)
 
----
+| # | Class | Topic |
+|---|-------|-------|
+| 1 | CheckDuplicateSeats | Arrays, nested loops |
+| 2 | CheckTypingAccuracy | String traversal, percentages |
+| 3 | FindLongestStreak | Running counters |
+| 4 | AnalyzeInventory | Sums, max with index |
+| 5 | ClassifyWordLengths | String splitting, categories |
+
+## How to Compile & Run
+
+```bash
+cd src/main/java
+javac -encoding UTF-8 -d out fundamentals/*/*.java
+java -cp out fundamentals.class_problems.PalindromeChecker
+```
+
+## Status
+
+✅ All 10 problems implemented. Compiles with JDK 17. Output not re-checked against the assignment PDFs in this session.
